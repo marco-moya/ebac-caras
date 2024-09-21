@@ -1,0 +1,13 @@
+@mixin flex-center ($direction: row, $justify: start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin tablet {
+  @media screen and (min-width: 54em) {
+    @content;
+  }
+}

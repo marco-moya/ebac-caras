@@ -1,0 +1,19 @@
+$main-color: #ef4138;
+$second-color: #FFF;
+
+/* Step -2: 11.1111px → 12.16px */
+$fs--2: clamp(0.6944rem, 0.6757rem + 0.0937vi, 0.76rem);
+/* Step -1: 13.3333px → 15.2px */
+$fs--1: clamp(0.8333rem, 0.8rem + 0.1667vi, 0.95rem);
+/* Step 0: 16px → 19px */
+$fs-0: clamp(1rem, 0.9464rem + 0.2679vi, 1.1875rem);
+/* Step 1: 19.2px → 23.75px */
+$fs-1: clamp(1.2rem, 1.1188rem + 0.4063vi, 1.4844rem);
+/* Step 2: 23.04px → 29.6875px */
+$fs-2: clamp(1.44rem, 1.3213rem + 0.5935vi, 1.8555rem);
+/* Step 3: 27.648px → 37.1094px */
+$fs-3: clamp(1.728rem, 1.559rem + 0.8448vi, 2.3193rem);
+/* Step 4: 33.1776px → 46.3867px */
+$fs-4: clamp(2.0736rem, 1.8377rem + 1.1794vi, 2.8992rem);
+/* Step 5: 39.8131px → 57.9834px */
+$fs-5: clamp(2.4883rem, 2.1639rem + 1.6223vi, 3.624rem);
