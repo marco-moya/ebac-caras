@@ -104,11 +104,12 @@ body {
     transition: box-shadow 300ms ease-in-out;
   }
 
-  .form input[type="submit"]:hover {
+  .form__button:hover {
     cursor: pointer;
     background-color: $main-color;
     box-shadow: 0 0 1rem 0 #920000;
     transition: box-shadow 300ms ease-in-out;
+    cursor: pointer;
   }
 
   .footer__icon:hover {

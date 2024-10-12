@@ -11,8 +11,7 @@
   &__container {
     width: 100%;
     max-width: 400px;
-    height: 200vw;
-    max-height: 500px;
+    max-height: 600px;
     padding: 1rem;
     @include flex-center(column, space-evenly, stretch, 0);
     box-shadow: 0 0 1rem 0 #ccc;
@@ -26,11 +25,51 @@
     font-weight: 700;
     font-size: $fs-1;
   }
-  & input {
+  &__group {
+    margin-bottom: 1rem;
+    @include flex-center(column, space-evenly, stretch, 0);
+  }
+  &__group-input {
+    position: relative;
+  }
+  & label {
+    font-size: $fs-0;
+    font-weight: 600;
+    margin: 0.5rem;
+  }
+  &__input {
+    width: 100%;
     height: 31px;
-    padding: 0 1rem;
+    padding: 1.5rem 1rem;
     margin-bottom: 1rem;
     font-size: $fs-0;
+  }
+  &__input:focus {
+    border: 3px solid #0075ff;
+    outline: none;
+  }
+  &__validation-state {
+    position: absolute;
+    right: 1rem;
+    bottom: 2rem;
+    font-size: $fs-0;
+    color: $form-error-color;
+    opacity: 0;
+  }
+  &__message-success {
+    margin: 0.5rem 0;
+    color: $form-ok-color;
+    font-size: $fs-1;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+  }
+  &__message-error {
+    margin: 0.5rem 0;
+    color: $form-error-color;
+    font-weight: 600;
+    text-align: center;
+    display: none;
   }
   &__footer {
     max-width: 320px;
@@ -39,4 +78,55 @@
     font-weight: 600;
     font-size: $fs--1;
   }
+}
+
+.form * {
+  font-family: $font-family-barlow;
+}
+
+// Validaciones
+
+.form__input-error{
+  color: $form-error-color;
+  font-size: $fs--1;
+  font-weight: 600;
+  display: none;
+}
+
+.form__message-success-active {
+  display: block;
+} 
+
+.form__message-error-active {
+  display: block;
+}
+
+.form__group-incorrect 
+label {
+  color: $form-error-color;
+}
+
+.form__group-incorrect 
+.form__input {
+  border: 3px solid $form-error-color;
+}
+
+.form__group-incorrect 
+.form__validation-state {
+  opacity: 1;
+}
+
+.form__group-incorrect 
+.form__input-error {
+  display: block;
+}
+
+.form__group-correct 
+.form__validation-state {
+  color: $form-ok-color;
+  opacity: 1;
+}
+
+.form__validation-incorrect {
+  border: 3px solid $form-error-color;
 }
