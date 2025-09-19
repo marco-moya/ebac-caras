@@ -19,7 +19,7 @@
     <p class="header__subtitle">disfruta de una dosis semanal de entretenimiento, moda, arte y cultura que te enriquecerá como persona.</p>
   </header>
 
-  <main class="main">
+  <main class="main" role="main">
     <section class="form">
       <section class="form__front-page">
         <img src="./img/caras-portadas.jpg" alt="portadas de revistas cara">
@@ -29,37 +29,45 @@
         <div class="form__group" id="group__name">
           <label for="name">Nombre</label>
           <div class="form__group-input">
-            <input type="text" class="form__input" name="name" id="name" placeholder="Ingresa tu nombre">
+            <input type="text" 
+                   class="form__input" 
+                   name="name" 
+                   id="name" 
+                   placeholder="Ingresa tu nombre">
             <i class="form__validation-state fa-solid fa-circle-xmark"></i>
           </div>
-          <span class="form__input-error">
+          <span class="form__input-error" id="name-error" role="alert" aria-live="polite">
             El nombre solo puede contener letras.
           </span>
         </div>
         <div class="form__group" id="group__email">
           <label for="email">Correo</label>
           <div class="form__group-input">
-            <input type="email" class="form__input" name="email" id="email" placeholder="Ingresa tu correo electrónico">
+            <input type="email" 
+                   class="form__input" 
+                   name="email" 
+                   id="email" 
+                   placeholder="Ingresa tu correo electrónico">
             <i class="form__validation-state fa-solid fa-circle-xmark"></i>
           </div>
-          <span class="form__input-error">
+          <span class="form__input-error" id="email-error" role="alert" aria-live="polite">
             El correo solo puede contener letras, números, puntos, guiones y guion bajo.
           </span>
         </div>
         <button type="submit" class="form__button">Enviar</button>
-        <div class="form__message-error" id="form__message-error">
+        <div class="form__message-error" id="form__message-error" role="alert" aria-live="assertive">
           <i class="fa-solid fa-triangle-exclamation"></i><b> Error:</b> Por favor rellena el formulario correctamente.
         </div>
-        <span class="form__message-success" id="form__message-success">
+        <span class="form__message-success" id="form__message-success" role="alert" aria-live="polite">
           ¡Formulario enviado exitosamente!
         </span>
         <p class="form__footer">Puedes cancelar la suscripción en cualquier momento</p>
       </form>
     </section>
 
-    <h2 class="benefits__title">Beneficios de suscribirse al newsletter</h2>
+    <h2 class="benefits__title">Beneficios de suscribirse al <span lang="en">newsletter</span></h2>
 
-    <section class="benefits">
+    <section class="benefits" aria-labelledby="benefits-title">
       <article class="benefits__card">
         <figure class="benefits__card-img"><img src="./img/tendencia-medium.jpg" alt="cuatro mujeres modelando diferentes vestidos"></figure>
         <div class="benefits__description">
@@ -78,7 +86,7 @@
         <figure class="benefits__card-img"><img src="./img/creatividad-medium.jpg" alt="taza de café representando un reloj analogo"></figure>
         <div class="benefits__description">
           <h3 class="benefits__card-title">Alimenta tu creatividad</h3>
-          <p class="benefits__card-text">El newsletter te proporcionará inspiración para tu propia vida creativa, ya sea que te dediques a la música, la pintura, la escritura o cualquier otra forma de arte.</p>
+          <p class="benefits__card-text">El <span lang="en">newsletter</span> te proporcionará inspiración para tu propia vida creativa, ya sea que te dediques a la música, la pintura, la escritura o cualquier otra forma de arte.</p>
         </div>
       </article>
       <article class="benefits__card">
@@ -92,52 +100,52 @@
 
     <h2 class="testimony__title">Conoce lo que opinan algunos de nuestros suscriptores</h2>
 
-    <section class="testimony">
+    <section class="testimony" aria-labelledby="testimony-title">
       <article class="testimony__container">
         <div class="testimony__user">
           <figure class="testimony__user-img">
-            <img src="./img/testimonio-sofía.jpg" alt="foto de mujer">
+            <img src="./img/testimonio-sofía.jpg" alt="foto de suscriptor">
           </figure>
           <div class="testimony__user-data">
             <p>Sofía</p>
             <p>25 años</p>
           </div>
         </div>
-        <p class="testimony__user-text">"¡Me encanta este newsletter! Siempre me mantiene al día con las últimas tendencias en moda y música. Además, he descubierto muchos artistas nuevos gracias a él. ¡Súper recomendado!"</p>
+        <p class="testimony__user-text">"¡Me encanta este <span lang="en">newsletter</span>! Siempre me mantiene al día con las últimas tendencias en moda y música. Además, he descubierto muchos artistas nuevos gracias a él. ¡Súper recomendado!"</p>
       </article>
       <article class="testimony__container">
         <div class="testimony__user">
           <figure class="testimony__user-img">
-            <img src="./img/testimonio-diego.jpg" alt="foto de mujer">
+            <img src="./img/testimonio-diego.jpg" alt="foto de suscriptor">
           </figure>
           <div class="testimony__user-data">
             <p>Diego</p>
             <p>32 años</p>
           </div>
         </div>
-        <p class="testimony__user-text">"Soy un apasionado del arte y este newsletter me ha sido de gran ayuda para descubrir nuevas galerías y artistas emergentes. También me gusta mucho la sección de entrevistas, donde puedo conocer más sobre la trayectoria de mis artistas favoritos."</p>
+        <p class="testimony__user-text">"Soy un apasionado del arte y este <span lang="en">newsletter</span> me ha sido de gran ayuda para descubrir nuevas galerías y artistas emergentes. También me gusta mucho la sección de entrevistas, donde puedo conocer más sobre la trayectoria de mis artistas favoritos."</p>
       </article>
       <article class="testimony__container">
         <div class="testimony__user">
           <figure class="testimony__user-img">
-            <img src="./img/testimonio-ana.jpg" alt="foto de mujer">
+            <img src="./img/testimonio-ana.jpg" alt="foto de suscriptor">
           </figure>
           <div class="testimony__user-data">
             <p>Ana</p>
             <p>55 años</p>
           </div>
         </div>
-        <p class="testimony__text">"Este newsletter es perfecto para personas como yo que no tienen mucho tiempo para estar buscando información en internet. Me llega toda la información a mi bandeja de entrada y puedo leerla cuando tengo tiempo. ¡Muy recomendable!"</p>
+        <p class="testimony__text">"Este <span lang="en">newsletter</span> es perfecto para personas como yo que no tienen mucho tiempo para estar buscando información en internet. Me llega toda la información a mi bandeja de entrada y puedo leerla cuando tengo tiempo. ¡Muy recomendable!"</p>
       </article>
     </section>
   </main>
 
   <footer class="footer">
-    <p class="footer__copy">EDITORIAL TELEVISA S.A. DE C.V. TODOS LOS DERECHOS RESERVADOS. TBG - EDITORIAL TELEVISA - ENTERTAINMENT - NEWS</p>
+    <p class="footer__copy">EDITORIAL TELEVISA S.A. DE C.V. TODOS LOS DERECHOS RESERVADOS. TBG - EDITORIAL TELEVISA - ENTERTAINMENT - <span lang="en">NEWS</span></p>
     <section class="footer__social-media">
-      <a class="footer__icon" href="https://x.com/CarasMex" target="_blank"><img src="./img/twitter.png" alt="icono twitter"></a>
-      <a class="footer__icon" href="https://www.instagram.com/carasmexico/" target="_blank"><img src="./img/instagram.png" alt="icono instagram"></a>
-      <a class="footer__icon" href="https://www.facebook.com/search/top?q=caras%20m%C3%A9xico" target="_blank"><img src="./img/facebook.png" alt="icono facebook"></a>
+      <a class="footer__icon" href="https://x.com/CarasMex" target="_blank" aria-label="Visita nuestro twitter"><img src="./img/twitter.png" alt="icono twitter"></a>
+      <a class="footer__icon" href="https://www.instagram.com/carasmexico/" target="_blank" aria-label="Visita nuestro instagram"><img src="./img/instagram.png" alt="icono instagram"></a>
+      <a class="footer__icon" href="https://www.facebook.com/search/top?q=caras%20m%C3%A9xico" target="_blank" aria-label="Visita nuestro facebook"><img src="./img/facebook.png" alt="icono facebook"></a>
     </section>
   </footer>
   <script src="https://kit.fontawesome.com/aaed170742.js" crossorigin="anonymous"></script>

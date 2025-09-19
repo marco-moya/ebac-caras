@@ -29,13 +29,13 @@
     margin-bottom: 1rem;
     @include flex-center(column, space-evenly, stretch, 0);
   }
-  &__group-input {
-    position: relative;
-  }
   & label {
     font-size: $fs-0;
     font-weight: 600;
     margin: 0.5rem;
+  }
+  &__group-input {
+    position: relative;
   }
   &__input {
     width: 100%;
@@ -43,6 +43,7 @@
     padding: 1.5rem 1rem;
     margin-bottom: 1rem;
     font-size: $fs-0;
+    border: 1px solid #ccc;
   }
   &__input:focus {
     border: 3px solid #0075ff;

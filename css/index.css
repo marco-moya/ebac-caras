@@ -70,13 +70,13 @@ img {
   align-items: stretch;
   gap: 0;
 }
-.form__group-input {
-  position: relative;
-}
 .form label {
   font-size: clamp(1rem, 0.9464rem + 0.2679vi, 1.1875rem);
   font-weight: 600;
   margin: 0.5rem;
+}
+.form__group-input {
+  position: relative;
 }
 .form__input {
   width: 100%;
@@ -84,6 +84,7 @@ img {
   padding: 1.5rem 1rem;
   margin-bottom: 1rem;
   font-size: clamp(1rem, 0.9464rem + 0.2679vi, 1.1875rem);
+  border: 1px solid #ccc;
 }
 .form__input:focus {
   border: 3px solid #0075ff;
@@ -175,7 +176,6 @@ img {
   letter-spacing: 1px;
   border: none;
   border-radius: 4px;
-  color: #FFF;
   background-color: #ef4138;
 }
 

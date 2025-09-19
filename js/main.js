@@ -43,7 +43,7 @@ const validateField = (expression, input, field) => {
 }
 
 $inputs.forEach((input) => {
-  // Agraga el evento keyup y blur a cada input del formulario.
+  // Agrega el evento keyup y blur a cada input del formulario.
   input.addEventListener("keyup", validateForm);
   input.addEventListener("blur", validateForm);
 });
