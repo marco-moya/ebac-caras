@@ -19,9 +19,9 @@
     border: thin solid #666;
     border-radius: 50%;
     @include flex-center(row, center, center, 0);
-    & > img {
-      width: 20px;
-      height: 20px;
+    & > svg {
+      width: 30px;
+      height: 30px;
     }
   }
 }

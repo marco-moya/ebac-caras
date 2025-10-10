@@ -107,7 +107,7 @@ body {
   .form__button:hover {
     cursor: pointer;
     background-color: $main-color;
-    box-shadow: 0 0 1rem 0 #920000;
+    box-shadow: 0 4px 1rem 0 rgba(146, 0, 0, 0.7);
     transition: box-shadow 300ms ease-in-out;
     cursor: pointer;
   }

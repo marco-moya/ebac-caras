@@ -167,7 +167,7 @@ img {
 
 .form__button {
   height: 45px;
-  padding: 0;
+  padding: 0 2rem;
   line-height: 45px;
   margin: 1rem 0;
   font-size: clamp(1rem, 0.9464rem + 0.2679vi, 1.1875rem);
@@ -175,8 +175,42 @@ img {
   font-family: "Barlow", sans-serif;
   letter-spacing: 1px;
   border: none;
-  border-radius: 4px;
-  background-color: #ef4138;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ef4138 0%, rgb(235.2827906977, 29.5581395349, 18.9172093023) 100%);
+  color: #FFF;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 12px rgba(239, 65, 56, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.form__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2) 50%, transparent);
+  transition: left 0.6s ease;
+}
+.form__button:hover::before {
+  left: 100%;
+}
+.form__button:hover {
+  background: linear-gradient(135deg, rgb(242.0362790698, 101.0558139535, 93.7637209302) 0%, #ef4138 30%, rgb(237.1023255814, 42.4651162791, 32.3976744186) 70%, rgb(225.8418604651, 28.3720930233, 18.1581395349) 100%);
+  color: #FFF;
+  box-shadow: 0 8px 25px rgba(239, 65, 56, 0.4), 0 4px 12px rgba(239, 65, 56, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 rgba(202.2395348837, 25.4069767442, 16.2604651163, 0.3), 0 0 20px rgba(239, 65, 56, 0.15);
+  transform: translateY(-3px) scale(1);
+}
+.form__button:active {
+  background: linear-gradient(135deg, rgb(216.4009302326, 27.1860465116, 17.3990697674) 0%, rgb(235.2827906977, 29.5581395349, 18.9172093023) 50%, rgb(202.2395348837, 25.4069767442, 16.2604651163) 100%);
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 3px 8px rgba(239, 65, 56, 0.4), inset 0 2px 4px rgba(178.6372093023, 22.4418604651, 14.3627906977, 0.4), inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.8px;
+}
+.form__button:focus {
+  outline: 3px solid rgba(239, 65, 56, 0.3);
+  outline-offset: 2px;
 }
 
 .header {
@@ -229,9 +263,9 @@ img {
   align-items: center;
   gap: 0;
 }
-.footer__icon > img {
-  width: 20px;
-  height: 20px;
+.footer__icon > svg {
+  width: 30px;
+  height: 30px;
 }
 
 body {
@@ -341,7 +375,7 @@ body {
   .form__button:hover {
     cursor: pointer;
     background-color: #ef4138;
-    box-shadow: 0 0 1rem 0 #920000;
+    box-shadow: 0 4px 1rem 0 rgba(146, 0, 0, 0.7);
     transition: box-shadow 300ms ease-in-out;
     cursor: pointer;
   }
