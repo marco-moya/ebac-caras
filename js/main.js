@@ -30,14 +30,10 @@ const validateField = (expression, input, field) => {
   if (expression.test(input.value)) {
     d.getElementById(`group__${field}`).classList.remove("form__group-incorrect");
     d.getElementById(`group__${field}`).classList.add("form__group-correct");
-    d.querySelector(`#group__${field} i`).classList.remove("fa-circle-xmark");
-    d.querySelector(`#group__${field} i`).classList.add("fa-circle-check");
     fields[field] = true;
   } else {
     d.getElementById(`group__${field}`).classList.add("form__group-incorrect");
     d.getElementById(`group__${field}`).classList.remove("form__group-correct");
-    d.querySelector(`#group__${field} i`).classList.add("fa-circle-xmark");
-    d.querySelector(`#group__${field} i`).classList.remove("fa-circle-check");
     fields[field] = false;
   }
 }

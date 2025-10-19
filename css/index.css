@@ -1,4 +1,54 @@
 @charset "UTF-8";
+/* ========== BARLOW ========== */
+/* barlow-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/barlow-v13-latin/barlow-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/barlow-v13-latin/barlow-v13-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/barlow-v13-latin/barlow-v13-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ========== PLAYFAIR-DISPLAY ========== */
+/* playfair-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/playfair-display-v40-latin/playfair-display-v40-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/playfair-display-v40-latin/playfair-display-v40-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/playfair-display-v40-latin/playfair-display-v40-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -43,7 +93,7 @@ img {
 }
 .form__container {
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   max-height: 600px;
   padding: 1rem;
   display: flex;
@@ -90,6 +140,32 @@ img {
   border: 3px solid #0075ff;
   outline: none;
 }
+.form__icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: stretch;
+  gap: 0;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-85%);
+}
+.form__icon {
+  width: 25px;
+  height: 25px;
+}
+.form__icon--xmark {
+  fill: #F66060;
+  display: none;
+}
+.form__icon--check {
+  fill: #1ed12d;
+  display: none;
+}
+.form__icon--triangle-exclamation {
+  fill: #F66060;
+}
 .form__validation-state {
   position: absolute;
   right: 1rem;
@@ -111,7 +187,11 @@ img {
   color: #F66060;
   font-weight: 600;
   text-align: center;
-  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
 }
 .form__footer {
   max-width: 320px;
@@ -137,7 +217,7 @@ img {
 }
 
 .form__message-error-active {
-  display: block;
+  display: flex;
 }
 
 .form__group-incorrect label {
@@ -153,6 +233,14 @@ img {
 }
 
 .form__group-incorrect .form__input-error {
+  display: block;
+}
+
+.form__group-incorrect .form__icon-incorrect {
+  display: block;
+}
+
+.form__group-correct .form__icon-correct {
   display: block;
 }
 
